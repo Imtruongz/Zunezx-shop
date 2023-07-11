@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@0,400;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+/* css Header */
+header{
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 100px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+header.hidden {
+    transform: translateY(-100%);
+  }
+
+header .logo{
+    font-weight: 700;
+    font-size: 2em;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+header .navigation li{
+    list-style: none;
+}
+header .navigation li a{
+    font-weight: 300;
+}
+header .navigation li a:hover{
+    border-bottom: 2px solid #fff;
+}
+#toggler, header label{
+    display: none;
+}
+/* dropdown */
+.dropbtn:hover .hidden-clothes{
+    display: block;
+}
+.hidden-clothes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes{
+    display: none;
+    width: 120px;
+    height: 220px;
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 300px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-clothes li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-clothes ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+/*  */
+.dropbtn:hover .hidden-account{
+    display: block;
+}
+.hidden-account::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account{
+    display: none;
+    width: 120px;
+    height: 140px;
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 90px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-account li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-account ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+.product{
+    border: none;
+    outline: none;
+    color: black;
+    padding-left: 10px;
+    border-radius: 10px;
+    display: none;
+}
+li button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+/* css main */
+.banner{
+    width: 100%;
+    min-height: 80vh;
+    background: url(https://zunezx.com/upload/image/data/SU-KIEN/birthday-tour/COVER-FB-2b0.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+}
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #212121;
+}
+.container-event{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container-event .event img{
+    max-width: 450px;
+}
+.container-event .event{
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+.slide-container{
+    position: relative;
+    height: 500px;
+}
+.slidershow{
+	width: 70%;
+	height: 550px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.slide-container .slidershow .navigation{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+    flex-direction: row;
+}
+.bar{
+	width: 20px;
+	height: 20px;
+	border:2px solid #fff;
+	border-radius: 30px;
+	margin: 10px;
+	cursor: pointer;
+}
+.bar:hover{
+	background: #ff0157;
+	transition: 0.6s;
+	border:2px solid #d31c59;
+}
+input[name="bottom"]{
+	position: absolute;
+	visibility: hidden;
+}
+.slides{
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+.slide{
+	width: 20%;
+	transition: 0.6s;
+}
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+#bottom_1:checked ~ .s1{
+	margin-left: 0;
+}
+#bottom_2:checked ~ .s1{
+	margin-left: -20%;
+}
+#bottom_3:checked ~ .s1{
+	margin-left: -40%;
+}
+.lookbook p{
+    color: #212121;
+    text-align: center;
+}
+.video-ytb{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.video-ytb iframe{
+    width: 800px;
+    height: 450px;
+}
+.about-us-container{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 50px;
+}
+.about-us-container .about-us{
+    width: 43%;
+}
+.about-us-container .about-us p{
+    color: #212121;
+}
+.menu .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+.menu .content .box{
+    width: 400px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+.menu .content .box .img-box h3{
+    padding: 15px 0 5px;
+    font-weight: 400;
+    color: #111;
+    text-align: center;
+}
+.menu .content .box .img-box img{
+    width: 100%;
+}
+.buyitem{
+    text-align: center;
+}
+.menu .content .box .buyitem a h3{
+    padding: 10px 10px;
+    font-weight: 400;
+    background-color: #575656;
+    border-radius: 10px;
+    text-align: center;
+}
+.buyitem{
+    margin-left: 85px;
+    width: 200px;
+}
+.menu .content .box .buyitem a h3:hover{
+    background-color: #474646;
+}
+.viewmore{
+    text-align: center;
+}
+.btn-viewmore{
+    background: #ff0157;
+    display: inline-block;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    border-radius: 10px;  
+}
+.btn-viewmore:hover{
+    background: #d31c59;
+}
+/* css footer */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 170px;
+    position: relative;
+}
+.logo2 img{
+    width: 200px;
+    user-select: none;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.address a{
+    padding-top: 5px;
+}
+.address h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0 0 20 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+footer .icon ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon ul li{
+    display: flex;
+    list-style: none;
+}
+.icon ul h3{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 14px;
+}
+/*  */
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    font-family: 'Calibri';
+}
+/*  */
+.inbox{
+    width: 60px;
+    position: fixed;
+    border-radius: 99%;
+    bottom: 40px;
+    left: 20px;
+    z-index: 999;
+    transition: transform 0.3s ease-out;
+}
+.inbox:hover{
+   transform: scale(1.2);
+}
+/*  */
+hr{
+    margin: 50px;
+}
+

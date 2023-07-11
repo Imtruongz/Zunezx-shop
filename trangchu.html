@@ -1,0 +1,218 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="css/trangchu-style.css">
+    <link rel="stylesheet" href="responsive/trangchu-responsive.css">
+</head>
+<body>
+    <!-- Thanh header -->
+    <header id="header">
+        <input type="checkbox" id="toggler">
+        <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+        <a href="trangchu.html" class="logo">Zune<span>.</span>zx</a>
+        <div class="menu-nav">
+            <ul class="navigation">
+                <li>
+                    <div class="dropbtn">
+                        <a class="hover-border" href="sanpham.html" target="_blank" class="dropbtn">Sản phẩm
+                            <div class="hidden-clothes" id="hidden-clothes">
+                                <ul>
+                                    <li><a href="ao.html" target="_blank">Áo</a></li>
+                                    <li><a href="quan.html" target="_blank">Quần</a></li>
+                                    <li><a href="phukien.html" target="_blank">Phụ kiện</a></li>
+                                    <li><a href="xemthem.html" target="_blank">Giảm giá</a></li>
+                                    <li><a href="xemthem.html" target="_blank">Set phối sẵn</a></li>
+                                </ul>
+                            </div>     
+                        </a>
+                    </div>
+                </li>
+                <li><a href="aboutus.html" target="_blank">Về chúng tôi</a></li>
+                <li>
+                    <div class="dropbtn">
+                        <span class="hover-border" href="sanpham.html" target="_blank" class="dropbtn"><i class="fa-solid fa-user" ></i>
+                            <div class="hidden-account" id="hidden-account">
+                                <ul>
+                                    <li><a href="profile.html" target="_blank">Tài khoản</a></li>
+                                    <li><a href="profile.html" target="_blank">Giỏ hàng</a></li>
+                                    <li><a href="index.html">Đăng xuất</a></li>
+                                </ul>
+                            </div>     
+                        </span>
+                    </div>
+                </li>
+                <input type="text" class="product" id="product" placeholder="Tìm kiếm sản phẩm">
+                <li><button onclick="showProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button></li>
+            </ul>
+        </div>
+    </header>
+    <!-- icon mess -->
+    <div>
+        <a href="https://www.messenger.com/" target="_blank"><img class="inbox" src="assets/messenger.png"></a>
+    </div>
+    <!-- Main -->
+    <main>
+    <!-- banner -->
+    <section class="banner" id="banner"></section>
+    <!-- Event -->
+    <h1>SỰ KIỆN NỔI BẬT</h1>
+    <section class="container-event">
+        <div class="event">
+            <img src="assets/100code.jpg">
+        </div>
+        <div class="event">
+            <img src="assets/event2.png">
+        </div>
+        <div class="event">
+            <img src="assets/tiktokmasterwheel.jpg">
+        </div>
+        <!-- Quan ao -->
+    </section>
+    <hr>
+    <div class="slide-container">
+        <div class="slidershow">
+            <div class="slides">
+                <input type="radio" name="bottom" id="bottom_1" checked>
+                <input type="radio" name="bottom" id="bottom_2">
+                <input type="radio" name="bottom" id="bottom_3">
+                <div class="slide s1">
+                    <img src="assets/banner1.jpg">
+                </div>
+                <div class="slide">
+                    <img src="assets/banner2.jpg">
+                </div>
+                <div class="slide">
+                    <img src="assets/banner3.jpg">
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="bottom_1" class="bar"></label>
+                <label for="bottom_2" class="bar"></label>
+                <label for="bottom_3" class="bar"></label>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h1>ƯU ĐÃI ĐẶC BIỆT</h1>
+    <section class="menu" id="menu">
+        <div class="content">
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/PEACEBIRDTEE1.jpg">
+                    <h3>PEACE BIRD TEE: 300,000đ</h3>    
+                </div>
+                <div class="buyitem">
+                    <a href="ao-peacebirdtee.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/REDHORIZONJACKET1.jpg" alt="">
+                    <h3>RED HORIZON JACKET: 990,000đ</h3>
+                </div>
+                <div class="buyitem">
+                    <a href="ao-redhozionjacket.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/shodobikerjacket1.jfif" alt="">
+                    <h3>SHODO BIKER JACKET: 450,000đ</h3>
+                </div>
+                <div class="buyitem">
+                    <a href="ao-shodobikerjacket.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/opdt2.jpg" alt="">
+                    <h3>WOMEN CASE: 80,000đ</h3>
+                </div>
+                <div class="buyitem">
+                    <a href="opdt-culturewomencase.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/opdt3.jpg" alt="">
+                    <h3>BLACK CASE: 90,000đ</h3>
+                </div>
+                <div class="buyitem">
+                    <a href="opdt-logomaniablackcase.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="img-product/darkleggingzune.zx1.png" alt="">
+                    <h3>DARK LEGGING ZUNE: 390,000đ</h3>
+                </div>
+                <div class="buyitem">
+                    <a href="quan-darkleggingzune.zx.html" target="_blank"><h3>Mua hàng</h3></a>
+                </div>
+            </div>
+        </div>
+        <!-- blabla -->
+    </section>
+    <div class="viewmore">
+        <a href="sanpham.html" class="btn-viewmore" target="_blank">Xem thêm</a>
+    </div>
+    <hr>
+    <div class="lookbook">
+        <h1>LOOKBOOK</h1>
+        <p>Những định kiến và khuôn mẫu chung luôn muốn kìm hãm chúng ta lại, nhưng chỉ những tâm hồn tự do và dũng cảm nhất mới dám vươn lên đương đầu,</p>
+        <p>cái tôi độc lập là vũ khí và thời trang là tấm khiên nâng đỡ, hãy lắng nghe thanh âm của riêng mình và đi con đường mà mình muốn. Đó là tiếng nói Zune.Zx </p>
+        <p>muốn truyền tải thông qua concept series này, bạn vẫn đang lắng nghe chứ?</p>
+    </div>
+    <div class="video-ytb">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IiNuWdWjcEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <div class="about-us-container">
+        <div class="about-us">
+            <h1>ABOUT US</h1>
+            <p>ZUNE.ZX là thương hiệu thời trang PHI GIỚI TÍNH PHONG CÁCH NHẬT.</p>
+            <p>Tông màu chủ đạo ĐỎ ĐEN TRẮNG với những thiết kế khác biệt, độc đáo và cá tính.</p>
+            <p>ZUNE.ZX muốn thông qua những bộ trang phục lan tỏa thông điệp " PHÁ VỠ QUY TẮC ĐỂ TỰ DO THỂ HIỆN CÁI TÔI KHÁC BIỆT QUA THỜI TRANG PHI GIỚI TÍNH "</p>
+            <br>
+            <p>Hành trình đi tìm bản ngã tuổi trẻ, đi tìm cái tôi cá nhân thông qua hơi thở thời trang “dị biệt” là một hành trình dài bất tận. Thật chẳng dễ dàng để về đích hay hữu hình để tha hồ chạm tới.
+                Chúng ta sinh ra vốn là những cá thể độc lập và có quyền tự do tận hưởng cuộc sống này. Vậy tại sao, lại “dễ dãi” đồng ý cho những định kiến, những quy tắc và giới hạn vô lý ảnh hưởng. Hãy cứ là chính mình, là những kẻ “dị biệt” mang khát khao tiên phong thời đại. Như chú cá Koi duy nhất đầy kiên trì và mạnh mẽ vươn lên khỏi thác nước để hoá thành chú rồng vàng tuyệt đẹp.</p>
+        </div>
+        <div class="about-us-img">
+            <img src="assets/CGV-b47.jpg" alt="">
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="logo2">
+            <img src="assets/logobottom.png" alt="">
+        </div>
+        <div class="address">
+            <h3>HỆ THỐNG CỬA HÀNG</h3>
+            <a href="https://www.google.com/maps/place/Zune.zx+%C4%90%C3%B4ng+C%C3%A1c+H%C3%A0+N%E1%BB%99i/@21.0195012,105.8248947,17z/data=!3m1!4b1!4m5!3m4!1s0x3135abd4d0b8b813:0x4f15798d19cd599d!8m2!3d21.0194938!4d105.8270785?hl=vi" target="_blank"><i class="fa-solid fa-location-dot" ></i> Hà Nội: 61 Đông Các, Đống Đa</a>
+            <a href="https://www.google.com/maps/place/ZUNE.ZX+Unisex+Brand+-+Phong+C%C3%A1ch+Th%E1%BB%9Di+Trang+Phi+Gi%E1%BB%9Bi+T%C3%ADnh+L%E1%BA%A5y+C%E1%BA%A3m+H%E1%BB%A9ng+T%E1%BB%AB+Nh%E1%BA%ADt+B%E1%BA%A3n/@16.0608876,108.1850889,14z/data=!4m10!1m2!2m1!1szune+da+nang%5C!3m6!1s0x31421949c0aa2b71:0x91a517ac21408bb4!8m2!3d16.0608876!4d108.2201078!15sCg16dW5lIGRhIG5hbmdcWg4iDHp1bmUgZGEgbmFuZ5IBDmNsb3RoaW5nX3N0b3JlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5oZHpsNlJVVjNFQUXgAQA!16s%2Fg%2F11gpgdywjh?hl=vi"target="_blank"><i class="fa-solid fa-location-dot" ></i> Đà Nẵng: 65 Nguyễn Văn Linh, Hải Châu 1</a>
+            <a href="https://www.google.com/maps/place/Zune.zx+Tp+H%E1%BB%93+Ch%C3%AD+Minh/@10.770125,106.6800419,17z/data=!3m1!4b1!4m5!3m4!1s0x3175294623b98ce1:0xc580c161cd9fcc84!8m2!3d10.7701152!4d106.684539?hl=vi"target="_blank"><i class="fa-solid fa-location-dot" ></i> HCM: 411 Võ Văn Tần, P5, Q3</a>
+            <a href="tel:0901091122"target="_blank"><i class="fa-solid fa-phone" ></i> 0901091122</a>
+            <a href="mailto:webzune0903@gmail.com"target="_blank"><i class="fa-solid fa-envelope" ></i> webzune0903@gmail.com</a>
+        </div>
+        <div class="icon">
+            <ul>
+                <h3>THEO DÕI CHÚNG TÔI</h3>
+                <li>
+                    <a href="https://shopee.vn/zunezx" target="_blank"><i class="fa-brands fa-shopify fa-2xl" ></i></a>
+                    <a href="https://www.tiktok.com/@zune.zx" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" ></i></i></a>
+                    <a href="https://www.facebook.com/zunezxvn/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl" ></i></a>
+                    <a href="https://www.instagram.com/zune.zx/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" ></i></a>
+                    <a href="https://www.youtube.com/channel/UCklZKNakn7dv4Q8uc4SwpQw?view_as=subscriber" target="_blank"><i class="fa-brands fa-youtube fa-2xl" ></i></a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">© Copyright 2023 VSS Corporation. All right reserved</p>
+    </footer>
+    <script src="js/trangchu-script.js"></script>
+    <script src="https://kit.fontawesome.com/7a215b7bf9.js" crossorigin="anonymous"></script>
+</body>
+</html>

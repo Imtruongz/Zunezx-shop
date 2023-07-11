@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUNEZX SHORT</title>
+</head>
+<link rel="stylesheet" href="css/allitem-style.css">
+<link rel="stylesheet" href="responsive/allitem-responsive.css">
+<body>
+    <!--Header -->
+    <header id="header">
+        <input type="checkbox" id="toggler">
+        <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+        <a href="trangchu.html" class="logo">Zune<span>.</span>zx</a>
+        <div class="menu-nav">
+            <ul class="navigation">
+                <li>
+                    <div class="dropbtn">
+                        <a class="hover-border" href="sanpham.html" target="_blank" class="dropbtn">Sản phẩm
+                            <div class="hidden-clothes" id="hidden-clothes">
+                                <ul>
+                                    <li><a href="ao.html" target="_blank">Áo</a></li>
+                                    <li><a href="quan.html" target="_blank">Quần</a></li>
+                                    <li><a href="phukien.html" target="_blank">Phụ kiện</a></li>
+                                    <li><a href="xemthem.html" target="_blank">Giảm giá</a></li>
+                                    <li><a href="xemthem.html" target="_blank">Set phối sẵn</a></li>
+                                </ul>
+                            </div>     
+                        </a>
+                    </div>
+                </li>
+                <li><a href="aboutus.html" target="_blank">Về chúng tôi</a></li>
+                <li>
+                    <div class="dropbtn">
+                        <span class="hover-border" href="sanpham.html" target="_blank" class="dropbtn"><i class="fa-solid fa-user" ></i>
+                            <div class="hidden-account" id="hidden-account">
+                                <ul>
+                                    <li><a href="profile.html" target="_blank">Tài khoản</a></li>
+                                    <li><a href="profile.html" target="_blank">Giỏ hàng</a></li>
+                                    <li><a href="index.html">Đăng xuất</a></li>
+                                </ul>
+                            </div>     
+                        </span>
+                    </div>
+                </li>
+                <input type="text" class="product" id="product" placeholder="Tìm kiếm sản phẩm">
+                <li><button onclick="showProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Icon inbox -->
+    <div>
+        <a href="#"><img class="inbox" src="assets/messenger.png"></a>
+    </div>
+    <!-- Menu sản phẩm -->
+    <section>
+        <div class="container">
+            <div class="image">
+                <div class="img-main">
+                    <img src="img-product/ZUNEZXSHORT1.jpeg" alt="">
+                </div>
+                <div class="img-extra">
+                    <img src="img-product/ZUNEZXSHORT1.jpeg" alt="">
+                    <img src="img-product/ZUNEZXSHORT2.jpg" alt="">
+                    <img src="img-product/ZUNEZXSHORT3.jpeg" alt="">
+                    <img src="img-product/ZUNEZXSHORT4.jpg" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <div class="ul-li">
+                    <h1>ZUNEZX SHORT</h1>
+                </div>
+                <div class="ul-li">
+                    <p>Mã sản phẩm: zune1202</p>
+                </div>
+                <div class="ul-li">
+                    <p>Tình trạng: Còn hàng</p>
+                </div>
+                <div class="ul-li" style="display: flex;">
+                    <p>Giá: </p><p id="giatien">500,000đ</p>
+                </div>
+                <div class="ul-li">
+                    <span>Kích thước:</span>
+                    <button onclick="changeColor(this)">M</button>
+                    <button onclick="changeColor(this)">L</button>
+                    <button onclick="changeColor(this)">X</button>
+                </div>
+                <div class="ul-li">
+                    <label for="quantity">Số Lượng:</label>
+                    <!-- Cho thằng "-" này lên -->
+                    <button id="decrement" onclick="tru()">-</button>
+                    <input type="text" id="quantity" name="quantity" value="1" readonly>
+                    <!-- Cho thằng "+" này xuống -->
+                    <button id="increment" onclick="cong()">+</button>
+                </div>
+                <div class="ul-li">
+                    <button onclick="showConfirmation()">Mua hàng</button>
+                    <!-- Button cần thêm onclick -->
+                    <button id="click-me" onclick="bought()">Thêm vào giỏ hàng</button>
+                    <button class="size-chart" onclick="openSizeChart()">Size quần áo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <div id="confirmationDiv" class="confirmation">
+        <i class="fa-solid fa-square-xmark fa-2xl" style="color: #ff0000;" id="closeButton" onclick="hideConfirmation()"></i>
+        <label for="paymentMethod">Phương thức thanh toán:</label>
+        <select id="paymentMethod" onchange="togglePaymentDetails()">
+          <option value="">Chọn phương thức thanh toán</option>
+          <option value="transfer">Chuyển khoản</option>
+          <option value="momo">Thanh toán qua Momo</option>
+        </select>
+        <br /><br />
+  
+        <div class="bank-details" id="bankDetails">
+          <p>Vui lòng nhập nội dung chuyển khoản với tiêu đề :Zunezx + Mã sản phẩm + Họ Tên + Số điện thoại</p>
+          <img src="assets/qrcode.jpg" alt="Mã QR" />
+        </div>
+  
+        <div class="momo-details" id="momoDetails">
+          <p>Đang cập nhật thêm...</p>
+        </div>
+  
+        <button id="confirmButton" onclick="confirmPurchase()" disabled>
+          Xác nhận
+        </button>
+      </div>
+    <!-- Show SizeChart -->
+    <div class="show-size-chart" id="show-size-chart">
+        <div class="img-size-chart">
+            <div><img src="assets/size-chart.png" alt=""></div>
+            <i class="fa-solid fa-square-xmark fa-2xl" onclick="closeSizeChart()"></i>
+        </div>
+    </div>
+    <div class="info2">
+        <h1>THÔNG TIN SẢN PHẨM</h1>
+    </div>
+    <!-- Liên hệ các thứ blabla -->
+    <footer>
+        <div class="logo2">
+            <img src="assets/logobottom.png" alt="">
+        </div>
+        <div class="address">
+            <h3>HỆ THỐNG CỬA HÀNG</h3>
+            <a href="https://www.google.com/maps/place/Zune.zx+%C4%90%C3%B4ng+C%C3%A1c+H%C3%A0+N%E1%BB%99i/@21.0195012,105.8248947,17z/data=!3m1!4b1!4m5!3m4!1s0x3135abd4d0b8b813:0x4f15798d19cd599d!8m2!3d21.0194938!4d105.8270785?hl=vi" target="_blank"><i class="fa-solid fa-location-dot" ></i> Hà Nội: 61 Đông Các, Đống Đa</a>
+            <a href="https://www.google.com/maps/place/ZUNE.ZX+Unisex+Brand+-+Phong+C%C3%A1ch+Th%E1%BB%9Di+Trang+Phi+Gi%E1%BB%9Bi+T%C3%ADnh+L%E1%BA%A5y+C%E1%BA%A3m+H%E1%BB%A9ng+T%E1%BB%AB+Nh%E1%BA%ADt+B%E1%BA%A3n/@16.0608876,108.1850889,14z/data=!4m10!1m2!2m1!1szune+da+nang%5C!3m6!1s0x31421949c0aa2b71:0x91a517ac21408bb4!8m2!3d16.0608876!4d108.2201078!15sCg16dW5lIGRhIG5hbmdcWg4iDHp1bmUgZGEgbmFuZ5IBDmNsb3RoaW5nX3N0b3JlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5oZHpsNlJVVjNFQUXgAQA!16s%2Fg%2F11gpgdywjh?hl=vi"target="_blank"><i class="fa-solid fa-location-dot" ></i> Đà Nẵng: 65 Nguyễn Văn Linh, Hải Châu 1</a>
+            <a href="https://www.google.com/maps/place/Zune.zx+Tp+H%E1%BB%93+Ch%C3%AD+Minh/@10.770125,106.6800419,17z/data=!3m1!4b1!4m5!3m4!1s0x3175294623b98ce1:0xc580c161cd9fcc84!8m2!3d10.7701152!4d106.684539?hl=vi"target="_blank"><i class="fa-solid fa-location-dot" ></i> HCM: 411 Võ Văn Tần, P5, Q3</a>
+            <a href="tel:0901091122"target="_blank"><i class="fa-solid fa-phone" ></i> 0901091122</a>
+            <a href="mailto:webzune0903@gmail.com"target="_blank"><i class="fa-solid fa-envelope" ></i> webzune0903@gmail.com</a>
+        </div>
+        <div class="icon">
+            <ul>
+                <h3>THEO DÕI CHÚNG TÔI</h3>
+                <li>
+                    <a href="https://shopee.vn/zunezx" target="_blank"><i class="fa-brands fa-shopify fa-2xl" ></i></a>
+                    <a href="https://www.tiktok.com/@zune.zx" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" ></i></i></a>
+                    <a href="https://www.facebook.com/zunezxvn/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl" ></i></a>
+                    <a href="https://www.instagram.com/zune.zx/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" ></i></a>
+                    <a href="https://www.youtube.com/channel/UCklZKNakn7dv4Q8uc4SwpQw?view_as=subscriber" target="_blank"><i class="fa-brands fa-youtube fa-2xl" ></i></a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">© Copyright 2023 VSS Corporation. All right reserved</p>
+    </footer>
+    <script src="js/allitem-script.js"></script>
+    <script src="https://kit.fontawesome.com/7a215b7bf9.js" crossorigin="anonymous"></script>
+</body>
+</html>
