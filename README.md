@@ -8,4 +8,5 @@ HTML, CSS, JavaScript, Flexbox, Response, Form validation, Local Storage, HTML D
 
 ![image](https://github.com/Imtruongz/Zunezx-shop/assets/112754228/152658bd-4db3-48d1-b442-8eb9645f1e8b)
 
-![image](https://github.com/Imtruongz/Zunezx-shop/assets/112754228/73423180-2c64-468e-97fe-80af8948d8bd)
+![image](https://github.com/Imtruongz/Zunezx-shop/assets/112754228/1a78ced0-5109-47fb-8962-b62ff184e14b)
+
